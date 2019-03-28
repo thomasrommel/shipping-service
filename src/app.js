@@ -9,7 +9,8 @@ app.get('/*shipping', (request, response) => {
   ctrl
     .getItemShipping({id: request.query.itemId, type: request.query.type})
     .then(amount => {
-      response.send({ itemId: request.query.itemId, priceUSD: amount })
+      response.setHeader('Content-Type', 'text/html');
+      response.send("<h2>{ itemId: request.query.itemId, priceUSD: amount }</h2>")
     })
     .catch(error => {
       response.status(500).send({ error: error.message })
