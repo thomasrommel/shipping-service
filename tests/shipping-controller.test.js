@@ -1,4 +1,4 @@
-/* tests/shipping-controller.test.js */
+// tests/shipping-controller.test.js
 var sinon = require('sinon')
 var ShippingController = require('../src/controllers/shipping-controller')
 var productService = require('../src/services/product-service')
@@ -24,9 +24,10 @@ describe('Shipping controller', function () {
     let shipping = await shippingCtrl.getItemShipping({ id: 1, type: 'standard' })
     expect(shipping).toBe(0.5)
   })
-    // part of tests/shipping-controller.test.js
-    it('Should calculate correct overnight shipping ', async function () {
-        let shipping = await shippingCtrl.getItemShipping({ id: 1, type: 'overnight' })
-        expect(shipping).toBe(5)
-    })
+
+  it('Should calculate correct overnight shipping ', async function () {
+    let shipping = await shippingCtrl.getItemShipping({ id: 1, type: 'overnight' })
+    expect(shipping).toBe(5)
+  })
+
 })
