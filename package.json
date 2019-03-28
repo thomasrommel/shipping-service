@@ -19,5 +19,9 @@
   "bugs": {
     "url": "https://github.com/thomasrommel/shipping-service/issues"
   },
-  "homepage": "https://github.com/thomasrommel/shipping-service#readme"
+  "homepage": "https://github.com/thomasrommel/shipping-service#readme",
+  "devDependencies": {
+    "nock": "^10.0.6",
+    "sinon": "^7.3.1"
+  }
 }
